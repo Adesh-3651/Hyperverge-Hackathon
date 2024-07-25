@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Digital Notice Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="announcements">
+        <h2>Announcements</h2>
+        <div class="announcement">
+            <span>This is a scrolling announcement text.</span>
+        </div>
+    </div>
+
+    <div id="widgets">
+        
+        <div id="google-slide" class="widget">
+            <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vT5CczopNJjRQEbzMWgKb4IQ5ANIFeCue_R1NKJrS2Y5vsuzAZ0RjMdtSeLewwdrtAo3DskX0ASqSJV/embed?start=false&loop=false&delayms=3000"
+                frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
+                webkitallowfullscreen="true"></iframe>
+        </div>
+        <div id="pomodoro-timer" class="widget">
+            <h2>Pomodoro Timer</h2>
+            <div id="clock">
+                <div id="hour-hand" class="hand"></div>
+                <div id="minute-hand" class="hand"></div>
+                <div id="second-hand" class="hand"></div>
+            </div>
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+     \
+
+
+        <div id="poll" class="widget">
+            <h2>Poll</h2>
+            <form id="poll-form">
+                <label for="poll-question">Poll Question:</label>
+                <input type="text" id="poll-question" required>
+                <div id="poll-options">
+                    <label>Options:</label>
+                    <input type="text" class="poll-option" required>
+                    <button type="button" id="add-option">Add Option</button>
+                </div>
+                <button type="submit">Submit Poll</button>
+            </form>
+            <div id="poll-voting"></div>
+            <canvas id="poll-chart"></canvas>
+        </div>
+
+        <div id="google-calendar" class="widget">
+            <h2>Google Calendar</h2>
+            <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York"
+                frameborder="0"></iframe>
+        </div>
+
+
+        <div id="issue-tracker" class="widget">
+            <h2>Issue Tracker</h2>
+            <div id="issue-form">
+                <input type="text" id="issue-input" placeholder="Enter new issue">
+                <button id="add-issue">Add Issue</button>
+            </div>
+            <div id="issue-list">
+                <h3>All Issues</h3>
+                <ul id="all-issues"></ul>
+            </div>
+            <div id="solved-issues">
+                <h3>Solved Issues</h3>
+                <ul id="solved-issues-list"></ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    <div id="daily-quote" class="widget">
+        <h2>Daily Quote</h2>
+        <p id="quote">"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt
+        </p>
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
